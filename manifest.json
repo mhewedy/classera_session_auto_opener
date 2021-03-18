@@ -1,0 +1,26 @@
+{
+  "name": "Classera Session Auto Opener",
+  "description": "Classera Session Auto Opener",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "webRequest",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://me.classera.com/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources":  [{
+    "resources": ["alarm.mp3"],
+    "matches": ["<all_urls>"],
+    "extension_ids": []
+  }]
+}
