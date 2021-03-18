@@ -13,9 +13,8 @@
             }
 
             window.open(url, '_blank');
-            for (i = 0; i < 10; i++) {
-                snd.play();
-            }
+            snd.play();
+           
             sessionStorage.setItem(url, 'true');
         }
 
