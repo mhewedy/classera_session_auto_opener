@@ -7,8 +7,13 @@
         
         let selectedDiv = [...timeDiv].find(it => {
             let hour = parseInt(it.textContent.split(':')[0], 10)
-            let min = parseInt(it.textContent.split(':')[1], 10)
-            return hour == new Date().getHours() && min == new Date().getMinutes();
+            let minute = parseInt(it.textContent.split(':')[1], 10)
+
+            let currentHour = new Date().getHours()
+            let currentMinute = new Date().getMinutes();
+            
+            // TODO try to make a 5 min allowance after class starts
+            return currentHour == hour &&  currentMinute == minute;
         });
 
         if (selectedDiv) {
